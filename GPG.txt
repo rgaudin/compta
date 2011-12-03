@@ -1,0 +1,26 @@
+
+GPG SAFETY GUIDE
+
+== Create GPG key
+
+gpg --gen-key
+
+== Export GPG key
+
+gpg --export --armor reg.ylm.public E7CE11EB
+gpg --export-secret-keys --armor reg.ylm.private E7CE11EB
+
+== Import GPG key
+
+gpg --import reg.ylm.public
+gpg --import reg.ylm.private
+
+== Encode file
+
+gpg --encrypt --recipient E7CE11EB FILE.ext
+
+== Decode file
+
+gpg --decrypt --output FILE.ext FILE.ext.gpg
+
+
