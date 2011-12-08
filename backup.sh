@@ -4,6 +4,8 @@ GIT_PATH=`dirname $(readlink -f $0)`
 
 echo "GIT path is $GIT_PATH"
 
+cd $GIT_PATH
+
 # remove potential edits
 git reset --hard
 
