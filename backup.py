@@ -10,5 +10,5 @@ print('#!/bin/bash')
 for f in os.listdir(SOURCE_DIR):
     if f.startswith('.'):
         continue
-    line = 'gpg --always-trust --encrypt --recipient E7CE11EB --output %(dest)s/%(fname)s.gpg %(src)s/%(fname)s' % {'dest': DESTINATION_DIR, 'src': SOURCE_DIR, 'fname': f}
+    line = 'gpg --batch --yes --always-trust --encrypt --recipient E7CE11EB --output %(dest)s/%(fname)s.gpg %(src)s/%(fname)s' % {'dest': DESTINATION_DIR, 'src': SOURCE_DIR, 'fname': f}
     print(line)
